@@ -1,0 +1,80 @@
+GET Method:
+
+To get all articles:
+
+URL: http://localhost:3000/articles
+Select the GET method in Postman and send the request.
+To get a specific article by its title:
+
+URL: http://localhost:3000/articles/articleTitle (replace articleTitle with the actual title of the article you want to retrieve)
+Select the GET method in Postman and send the request.
+
+------------------------------------------------------------------------------------------
+
+POST Method:
+
+To add a new article:
+URL: http://localhost:3000/articles
+Select the POST method in Postman.
+In the body section, choose "raw" and set the content type to "JSON."
+Provide the article data in JSON format, for example:
+json
+Copy code
+{
+  "title": "New Article",
+  "content": "This is a new article content."
+}
+Send the request.
+
+-----------------------------------------------------------------------------------------
+
+PUT Method:
+
+To update an existing article by its title:
+URL: http://localhost:3000/articles/articleTitle (replace articleTitle with the actual title of the article you want to update)
+Select the PUT method in Postman.
+In the body section, choose "raw" and set the content type to "JSON."
+Provide the updated article data in JSON format, for example:
+json
+Copy code
+{
+  "title": "Updated Article",
+  "content": "This is an updated article content."
+}
+Send the request.
+
+---------------------------------------------------------------------------------------
+
+PATCH Method:
+
+To partially update an existing article by its title:
+URL: http://localhost:3000/articles/articleTitle (replace articleTitle with the actual title of the article you want to update)
+Select the PATCH method in Postman.
+In the body section, choose "raw" and set the content type to "JSON."
+Provide the properties you want to update in JSON format, for example:
+json
+Copy code
+{
+  "title": "New Title"
+}
+Send the request.
+
+
+
+---------------------------------------------------------------------------------------
+
+DELETE Method:
+
+To delete all articles:
+
+URL: http://localhost:3000/articles
+Select the DELETE method in Postman and send the request.
+To delete a specific article by its title:
+
+URL: http://localhost:3000/articles/articleTitle (replace articleTitle with the actual title of the article you want to delete)
+Select the DELETE method in Postman and send the request.
+Make sure your server is running (node server.js) before testing the routes with Postman.
+
+
+
+
