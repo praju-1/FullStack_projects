@@ -17,7 +17,7 @@ API Development: The project includes the development of custom APIs or integrat
 Contributions to the Full-Stack Project are welcome! If you would like to contribute, please refer to the CONTRIBUTING file for guidelines on how to get started and the process for submitting pull requests.
 
 # Contact Information
-If you have any questions or inquiries regarding the Full-Stack Project, please feel free to reach out to me at [your contact information]. I am excited to discuss my work further and explore how my skills and experiences can contribute to future full-stack projects or collaborations.
+If you have any questions or inquiries regarding the Full-Stack Project, please feel free to reach out to me at prajaktatayde26@gmail.com. I am excited to discuss my work further and explore how my skills and experiences can contribute to future full-stack projects or collaborations.
 
 Thank you for exploring the Full-Stack Project. I hope you find it informative and inspiring as an example of my capabilities as a full-stack developer.
 
