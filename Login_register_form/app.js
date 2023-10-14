@@ -15,7 +15,7 @@ mongoose.connect(process.env.DB_collection, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
 });
-
+console.log("connection created");
 // Define mongoose schema and models for users
 const userSchema = new mongoose.Schema({
     username: String,
