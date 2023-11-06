@@ -1,0 +1,91 @@
+body{
+    font-family: 'PT Serif', serif;
+}
+/* Utility classes */
+
+.img-responsive{
+    max-width: 100%;
+    border: 1px solid ;
+}
+
+.hero_image{
+    background-image: url(/images/book.jpg);
+    height: 100vh;
+    background-size: cover;
+    position: relative;
+}
+
+.hero_wrapper{
+    color: black;
+    position: absolute;
+    top: 50%;
+    left: 65%;
+    transform: translate(-50%, -50%);
+}
+
+
+.hero_wrapper h1{
+    font-size: 2.5rem;
+    text-align: center;
+
+}
+
+.hero_wrapper span{
+    margin-left: 5rem;
+    display: inline-block;
+    margin-bottom: .5rem;
+}
+.form_code{
+    text-align: center;
+}
+
+.form_code .post_code{
+    display: block;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 2rem;
+    padding: .6rem;
+    border: none;
+    outline: none;
+}
+
+.form_code button{
+    width: 40%;
+    display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    background-color: aqua;
+    color: white;
+    padding: .6rem;
+    margin-top: 1rem;
+    border: 1px solid black;
+    border-radius: .5rem;
+
+}
+
+.product{
+    width: 80%;
+    margin-top: .3rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.product_list_item{
+    float: left;
+    width: 32%;
+    margin: .5rem;
+
+}
+.product_list_item:first-of-type{
+    margin-left: 0;
+}
+
+@media screen and (max-width: 700px) {
+    .product_list_item{
+        width: 100%;
+        float: none;
+    }
+
+}
