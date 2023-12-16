@@ -1,0 +1,2 @@
+1. Add logic of database to store using submit button
+2. same as for register and login form
