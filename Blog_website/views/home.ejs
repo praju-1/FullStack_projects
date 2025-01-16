@@ -1,0 +1,33 @@
+<%- include('partials/header'); -%>
+<div style="text-align: center; margin: 20px 0;">
+    <h1>Welcome to Daily Journal</h1>
+    <p style="font-size: 18px; color: #555;">Compose your thoughts, share your stories, and explore ideas daily.</p>
+</div>
+<!-- Add a hero image related to journaling -->
+<div style="text-align: center; margin-bottom: 20px;">
+    <img src="https://img.freepik.com/free-photo/closeup-hands-writing-diary_53876-31160.jpg?semt=ais_hybrid" alt="Daily Journal" style="width: 80%; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);">
+</div>
+    <!-- Add the "Compose Journal" button -->
+<div style="text-align: center; margin-bottom: 30px;">
+    <a href="/compose" style="text-decoration: none;">
+        <button style="padding: 12px 25px; background-color: #007bff; color: white; border: none; border-radius: 5px; cursor: pointer; font-size: 16px;">
+            Compose Journal
+        </button>
+    </a>
+</div>
+<% postcontent.forEach((element) => { %>
+    <div style="margin: 20px auto; padding: 15px; max-width: 600px; border: 1px solid #ddd; border-radius: 10px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+        <!-- Add a journal-related image for each post -->
+        <img src="https://cdn.pixabay.com/photo/2014/08/17/16/33/notebook-420011_1280.jpg" alt="Journal" style="width: 100%; height: auto; border-radius: 10px; margin-bottom: 15px;">
+        
+        <h3 style="color: #333; font-size: 24px; margin: 0 0 10px;">
+            <%= element.title %>
+        </h3>
+        <p style="color: #555; font-size: 16px;">
+            <%= element.content.slice(0, 50) %> ...
+            <a href="/blogs/<%= element.title %>" style="color: #007bff; text-decoration: none;">Read more</a>
+        </p>
+    </div>
+<% }) %>
+
+<%- include('partials/footer'); -%>
