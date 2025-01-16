@@ -1,8 +1,43 @@
 <%- include('partials/header'); -%>
 
-<h1>About</h1>
+<h1>About Us</h1>
+<p>
+    <%= aboutcontent %>
+</p>
+
+<!-- Our Mission Section -->
+<section style="margin: 30px 0; padding: 20px; border: 1px solid #ddd; border-radius: 10px; background-color: #f9f9f9;">
+    <h2>Our Mission</h2>
     <p>
-        <%= aboutcontent %>
+        At DAILY JOURNAL, our mission is to empower individuals to document their daily lives, reflect on their experiences, and inspire creativity. We aim to create a supportive community where every story is valued.
     </p>
+</section>
+
+<!-- Our Vision Section -->
+<section style="margin: 30px 0; padding: 20px; border: 1px solid #ddd; border-radius: 10px; background-color: #f9f9f9;">
+    <h2>Our Vision</h2>
+    <p>
+        We envision a world where journaling becomes a habit that fosters self-awareness, growth, and mindfulness. By providing a platform that is easy to use and accessible to everyone, we hope to inspire people to embrace the art of journaling in their everyday lives.
+    </p>
+</section>
+
+<!-- Why Choose Us Section -->
+<section style="margin: 30px 0; padding: 20px; border: 1px solid #ddd; border-radius: 10px; background-color: #f9f9f9;">
+    <h2>Why Choose Us?</h2>
+    <ul>
+        <li>Simple and intuitive platform for all your journaling needs.</li>
+        <li>Customizable templates to suit your journaling style.</li>
+        <li>Safe and secure storage for your personal entries.</li>
+        <li>A supportive community that values your unique journey.</li>
+    </ul>
+</section>
+
+<!-- Call-to-Action Section -->
+<section style="text-align: center; margin: 40px 0;">
+    <h3>Start Your Journaling Journey Today!</h3>
+    <a href="/compose" style="text-decoration: none;">
+        <button class="btn btn-primary" style="padding: 10px 20px; font-size: 16px;">Compose Your First Entry</button>
+    </a>
+</section>
 
 <%- include('partials/footer'); -%>

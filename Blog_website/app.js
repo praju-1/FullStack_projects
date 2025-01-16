@@ -2,6 +2,11 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const ejs = require("ejs");
 const _ = require("lodash");
+const mongoose = require("mongoose");
+// Import the Contact model
+const Contact = require("./models/module");
+const env = require("dotenv")
+env.config()
 
 const homeStartingContent = "Welcome to DAILY JOURNAL, a platform designed for you to document and share your daily life experiences. Here, you have the opportunity to capture your thoughts, reflections, and moments of inspiration. Whether you're looking to reflect on your day, set goals, or simply write about your experiences, this is your space. What You'll Find Here";
 
@@ -15,6 +20,11 @@ app.set('view engine', 'ejs');
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static("public"));
+
+// Connect to MongoDB
+mongoose.connect(process.env.contactDB)
+    .then(() => console.log("Connected to MongoDB"))
+    .catch(err => console.error("Error connecting to MongoDB:", err));
 
 const posts = [];
 
@@ -77,6 +87,68 @@ app.get("/blogs/:title", (req, res) => {
     }
   });
 })
+app.post("/contact", async (req, res) => {
+  const { name, email, message } = req.body;
+
+  try {
+      // Simulating saving the message (replace with actual database logic)
+      console.log(`Name: ${name}, Email: ${email}, Message: ${message}`);
+
+      // Send a nicely formatted response
+      res.send(`
+          <div style="
+              text-align: center;
+              padding: 20px;
+              margin: 50px auto;
+              border: 1px solid #ddd;
+              border-radius: 10px;
+              max-width: 500px;
+              box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+              font-family: Arial, sans-serif;
+          ">
+              <h2 style="color: #4CAF50;">Thank You!</h2>
+              <p>Your message has been received successfully.</p>
+              <p style="color: #555;">We will get back to you shortly.</p>
+              <a href="/" style="
+                  display: inline-block;
+                  margin-top: 20px;
+                  padding: 10px 20px;
+                  color: #fff;
+                  background-color: #007BFF;
+                  text-decoration: none;
+                  border-radius: 5px;
+              ">Return to Home</a>
+          </div>
+      `);
+  } catch (error) {
+      console.error("Error processing the contact form:", error);
+      res.status(500).send(`
+          <div style="
+              text-align: center;
+              padding: 20px;
+              margin: 50px auto;
+              border: 1px solid #f44336;
+              border-radius: 10px;
+              max-width: 500px;
+              box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+              font-family: Arial, sans-serif;
+          ">
+              <h2 style="color: #f44336;">Oops!</h2>
+              <p>Something went wrong. Please try again later.</p>
+              <a href="/contact" style="
+                  display: inline-block;
+                  margin-top: 20px;
+                  padding: 10px 20px;
+                  color: #fff;
+                  background-color: #007BFF;
+                  text-decoration: none;
+                  border-radius: 5px;
+              ">Return to Contact Form</a>
+          </div>
+      `);
+  }
+});
+
 
 app.listen(3000, function () {
   console.log("Server started on port 3000");
