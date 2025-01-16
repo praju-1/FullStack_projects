@@ -6,6 +6,7 @@ const mongoose = require("mongoose");
 // Import the Contact model
 const Contact = require("./models/module");
 const env = require("dotenv")
+
 env.config()
 
 const homeStartingContent = "Welcome to DAILY JOURNAL, a platform designed for you to document and share your daily life experiences. Here, you have the opportunity to capture your thoughts, reflections, and moments of inspiration. Whether you're looking to reflect on your day, set goals, or simply write about your experiences, this is your space. What You'll Find Here";
@@ -17,7 +18,6 @@ const contactContent = "We value your feedback and are here to assist you with a
 const app = express();
 
 app.set('view engine', 'ejs');
-
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static("public"));
 
@@ -150,6 +150,7 @@ app.post("/contact", async (req, res) => {
 });
 
 
-app.listen(3000, function () {
-  console.log("Server started on port 3000");
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => {
+    console.log(`Server started on port ${PORT}`);
 });
