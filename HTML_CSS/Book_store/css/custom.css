@@ -1,15 +1,20 @@
 body{
     font-family: 'PT Serif', serif;
+    /* background-color: cadetblue; */
+    margin: 0;
 }
 /* Utility classes */
 
 .img-responsive{
     max-width: 100%;
-    border: 1px solid ;
+    /* border: 1px solid ; */
+}
+img{
+    height: 300px;
 }
 
 .hero_image{
-    background-image: url(/images/book.jpg);
+    background-image: url("/HTML_CSS/Book_store/images/book.jpg");
     height: 100vh;
     background-size: cover;
     position: relative;
@@ -67,15 +72,18 @@ body{
 
 .product{
     width: 80%;
-    margin-top: .3rem;
+    margin-top: .5rem;
     margin-left: auto;
     margin-right: auto;
+    padding-bottom: 50px;
+    
 }
 
 .product_list_item{
     float: left;
     width: 32%;
     margin: .5rem;
+   
 
 }
 .product_list_item:first-of-type{
@@ -88,4 +96,14 @@ body{
         float: none;
     }
 
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    /* padding: 5px 0; */
+    text-align: center;
+    position: fixed;
+    bottom: 0;  
+    width: 100%;
 }
