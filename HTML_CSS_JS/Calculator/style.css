@@ -1,0 +1,142 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Arial", sans-serif;
+}
+
+/* Light Theme */
+.light-theme {
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+/* Dark Theme */
+.dark-theme {
+    background-color: #1e1e1e;
+    color: #fff;
+}
+
+/* Container */
+.container {
+    max-width: 350px;
+    margin: 50px auto;
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+    transition: background 0.3s;
+}
+
+/* Title */
+h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+/* Theme Toggle Button */
+.theme-toggle {
+    font-size: 18px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+}
+
+/* Calculator */
+.calculator {
+    background: #fff;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Dark Mode for Calculator */
+.dark-theme .calculator {
+    background: #333;
+}
+
+/* Display */
+#display {
+    width: 100%;
+    padding: 15px;
+    font-size: 22px;
+    text-align: right;
+    border: none;
+    outline: none;
+    background: #f0f0f0;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+/* Dark Mode for Display */
+.dark-theme #display {
+    background: #444;
+    color: #fff;
+}
+
+/* Buttons */
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+button {
+    width: 100%;
+    padding: 15px;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+/* Button Styles */
+button.clear {
+    background: #ff3b30;
+    color: white;
+}
+
+button.equal {
+    background: #34c759;
+    color: white;
+    margin-top: 15px;
+    
+}
+
+button.operator {
+    background: #007aff;
+    color: white;
+}
+
+/* Hover Effects */
+button:hover {
+    opacity: 0.8;
+}
+
+/* Dark Theme Buttons */
+.dark-theme button {
+    background: #666;
+    color: white;
+}
+
+.dark-theme button.operator {
+    background: #007aff;
+}
+
+.dark-theme button.clear {
+    background: #ff3b30;
+}
+
+.dark-theme button.equal {
+    background: #34c759;
+}
+button.backspace {
+    background: #ff9500;
+    color: white;
+}
+
+button.backspace:hover {
+    opacity: 0.8;
+}
